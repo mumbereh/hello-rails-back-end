@@ -7,3 +7,23 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+# db/seeds.rb
+
+# Clear existing data
+Greeting.destroy_all
+
+# Sample greetings
+greetings = [
+  "Hello!",
+  "Hi there!",
+  "Greetings!",
+  "Hey!",
+  "Welcome!"
+]
+
+# Create Greeting records
+greetings.each do |message|
+  Greeting.create(message: message)
+end
+
+puts "Seed data created successfully!"
